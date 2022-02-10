@@ -1,0 +1,32 @@
+{
+  "name": "hermes-worker",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/ashtonofsleep/hermes-worker#readme",
+  "license": "",
+  "author": "Sebastian Wirkijowski <sebastian@wirkijowski.dev> (https://wirkijowski.dev/)",
+  "main": "main.js",
+  "scripts": {
+    "start": "babel-node main.js",
+    "dev": "nodemon --exec babel-node --presets=@babel/preset-env -- main.js"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashtonofsleep/hermes-worker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ashtonofsleep/hermes-worker/issues"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "nodemon": "^2.0.15"
+  }
+}
