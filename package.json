@@ -1,9 +1,9 @@
 {
-  "name": "hermes-worker",
+  "name": "hermes-gateway",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/ashtonofsleep/hermes-worker#readme",
+  "homepage": "https://github.com/ashtonofsleep/hermes-gateway#readme",
   "license": "",
   "author": "Sebastian Wirkijowski <sebastian@wirkijowski.dev> (https://wirkijowski.dev/)",
   "main": "main.js",
@@ -14,14 +14,18 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashtonofsleep/hermes-worker.git"
+    "url": "git+https://github.com/ashtonofsleep/hermes-gateway.git"
   },
   "bugs": {
-    "url": "https://github.com/ashtonofsleep/hermes-worker/issues"
+    "url": "https://github.com/ashtonofsleep/hermes-gateway/issues"
   },
   "dependencies": {
+    "@sentry/node": "^6.17.7",
+    "@sentry/tracing": "^6.17.7",
     "dotenv": "^16.0.0",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "helmet": "^5.0.2",
+    "ioredis": "^4.28.5"
   },
   "devDependencies": {
     "@babel/core": "^7.17.2",
