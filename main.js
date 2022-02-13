@@ -34,6 +34,11 @@ server.use(Sentry.Handlers.tracingHandler());
 
 server.all('/:code([a-zA-Z0-9_-]{10})', controller);
 
+server.use('/check', (req, res, next) => {
+	console.log('Instance identity ping');
+	return next();
+});
+
 server.all('*', (req, res) => {
 	res.json({message: 'Welcome to the Hermes Gateway'})
 });

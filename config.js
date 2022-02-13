@@ -1,8 +1,8 @@
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({path: `.env${(process.env.NODE_ENV) ? '.'+process.env.NODE_ENV.toLowerCase() : ''}`});
 
 const env = process.env;
-if (!env.NODE_ENV) env.NODE_ENV = 'development';
+if (!env.NODE_ENV) env.NODE_ENV = 'DEVELOPMENT';
 
 const config = {};
 config.env = env.NODE_ENV;
@@ -13,9 +13,11 @@ if (!config.port) throw new Error('Unspecified port, cannot proceed');
 
 config.sentry = env.SENTRY;
 
-config.redis = {};
+config.redis = {
+	host: env.REDIS
+};
 
-config.hermes = 'http://localhost:4010/api';
+config.hermes = env.HERMES;
 config.defaultRedirect = 'https://wirkijowski.group/';
 config.cacheTime = 1800;
 

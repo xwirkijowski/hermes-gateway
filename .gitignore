@@ -59,7 +59,7 @@ web_modules/
 *.tgz
 .yarn-integrity
 .env
-.env.test
+.env*
 .cache
 .parcel-cache
 .next
