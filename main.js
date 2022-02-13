@@ -7,6 +7,7 @@ import helmet from 'helmet';
 import config from './config';
 
 import controller from './src/controllers/hermes.controller';
+import errorMiddleware from './src/middleware/error.middleware';
 
 const server = express();
 
@@ -44,6 +45,7 @@ server.all('*', (req, res) => {
 });
 
 server.use(Sentry.Handlers.errorHandler());
+server.use(errorMiddleware);
 
 server.listen(config.port, () => {
 	console.log(`Hermes Gateway online at port ${config.port} in ${config.env.toLowerCase()} mode`);
